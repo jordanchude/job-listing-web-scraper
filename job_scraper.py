@@ -12,8 +12,11 @@ html_content = response.text
 
 soup = BeautifulSoup(response.text, 'html.parser')
 
-for job_title in soup.find_all('h2', class_='feed-title'):
-    print(job_title.text)
 
-for job_description in soup.find_all('div', class_='feed-excerpt'):
-    print(job_description.text)
+def jobs():
+    job_titles = [title.text for title in soup.find_all('h2', class_='feed-title')]
+    job_descriptions = [description.text for description in soup.find_all('div', class_='feed-excerpt')]
+    for (title, description) in zip(job_titles, job_descriptions):
+        print(f'Job: {title}\nDescription: {description}\n')
+    
+jobs()
