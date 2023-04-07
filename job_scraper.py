@@ -9,3 +9,9 @@ else:
 html_content = response.text
 
 print(html_content)
+
+urls = []
+
+for url in urls:
+    response = requests.get(url)
+    print(response.content)
