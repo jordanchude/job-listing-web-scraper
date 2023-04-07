@@ -1,6 +1,6 @@
 # Job Listing Web Scraper
 
-This is a Python-based web scraper that extracts job listings from Indeed.com and saves the data in a structured format (CSV or JSON). The project includes a command-line interface (CLI) for easy interaction with the scraper.
+This is a Python-based web scraper that extracts job listings from nocsdegree.com and saves the data in a structured format (CSV or JSON). The project includes a command-line interface (CLI) for easy interaction with the scraper.
 
 ## Features
 
