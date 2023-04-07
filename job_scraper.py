@@ -16,6 +16,8 @@ soup = BeautifulSoup(response.text, 'html.parser')
 def jobs():
     job_titles = [title.text for title in soup.find_all('h2', class_='feed-title')]
     job_descriptions = [description.text for description in soup.find_all('div', class_='feed-excerpt')]
+    job_links = []
+    
     for (title, description) in zip(job_titles, job_descriptions):
         print(f'Job: {title}\nDescription: {description}\n')
     
